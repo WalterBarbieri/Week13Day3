@@ -9,12 +9,16 @@ public class App3 {
 		Scanner myObj = new Scanner(System.in);
 		do {
 
-			System.out.println("Inserire una stringa: ");
+			System.out.println("Inserire una stringa: \n(Premere :q per interrompere!)");
 			myString = myObj.nextLine();
 			String[] chars = myString.split("");
-			for (int i = 0; i < chars.length; i++) {
-				System.out.print(chars[i] + ",");
-			}
+			String newString = String.join(",", chars);
+			System.out.println(newString);
+
+			// Prima iterazione senza join
+			// for (int i = 0; i < chars.length; i++) {
+			// System.out.print(chars[i] + ",");
+			// }
 
 		} while (!myString.equals(":q"));
 		myObj.close();
